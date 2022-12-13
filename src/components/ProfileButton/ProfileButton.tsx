@@ -1,29 +1,40 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { RoutesEnum } from '../../routes/Routes.enum';
 
 type ProfileButtonProps = {
+  isActive: boolean,
   avatar?: string,
 }
 function ProfileButton({
-  avatar,
+  avatar, isActive,
 }: ProfileButtonProps) {
   return (
-    <div className="flex flex-row gap-4 items-center p-4 border-t border-indigo-800">
-      <div className="relative w-10 h-10">
-        <Image
-          className="rounded-3xl"
-          src={avatar}
-          alt=""
-          fill
-        />
+    <Link href={RoutesEnum.PROFILE}>
+      <div
+        className={`${isActive && 'bg-slate-800'}
+          transition ease-in-out duration-150
+          flex flex-row gap-4 items-center p-4 border-t border-slate-800
+          hover:bg-slate-800 active:bg-slate-900
+          `}
+      >
+        <div className="relative w-10 h-10">
+          <Image
+            className="rounded-3xl"
+            src={avatar}
+            alt=""
+            fill
+          />
+        </div>
+        <div className="flex flex-col text-white">
+          Shiro Artemia
+          <span className="text-sm text-slate-300">
+            Voir le profil
+          </span>
+        </div>
       </div>
-      <div className="flex flex-col text-white">
-        Shiro Artemia
-        <span className="text-sm text-slate-300">
-          Voir le profil
-        </span>
-      </div>
-    </div>
+    </Link>
   );
 }
 

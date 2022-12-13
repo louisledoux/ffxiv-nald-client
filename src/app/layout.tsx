@@ -1,8 +1,9 @@
 import React from 'react';
 import Navigation from '../containers/Navigation/Navigation';
-import routes from '../routes/routes';
+import { routes } from '../routes/routes';
 import TopBar from '../containers/TopBar/TopBar';
 // import '../styles/globals.css';
+import '../styles/style.css';
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -18,7 +19,7 @@ export default function RootLayout({
           <Navigation routes={routes} />
           <div className="flex flex-col gap-2 w-full">
             <TopBar />
-            <div className="m-4 h-full">
+            <div id="content" className="m-4 h-full">
               {children}
             </div>
           </div>

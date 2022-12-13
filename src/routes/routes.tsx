@@ -3,18 +3,18 @@ import HomeIcon from '../assets/icons/HomeIcon';
 import ListIcon from '../assets/icons/ListIcon';
 import BookmarkIcon from '../assets/icons/BookmarkIcon';
 import StatsIcon from '../assets/icons/StatsIcon';
+import { RoutesEnum } from './Routes.enum';
 
 export type RouteType = {
   title: string,
   url: string,
   icon?: ReactNode,
 }
-
 const routes: RouteType[] = [
-  { title: 'Accueil', url: '/', icon: <HomeIcon /> },
-  { title: 'Objets suivis', url: '/alerts', icon: <BookmarkIcon /> },
-  { title: 'Listes', url: '/lists/1', icon: <ListIcon /> },
-  { title: 'Statistiques', url: '/stats', icon: <StatsIcon /> },
+  { title: 'Accueil', url: RoutesEnum.ROOT, icon: <HomeIcon /> },
+  { title: 'Objets suivis', url: RoutesEnum.ALERTS, icon: <BookmarkIcon /> },
+  { title: 'Listes', url: RoutesEnum.LISTS, icon: <ListIcon /> },
+  { title: 'Statistiques', url: RoutesEnum.STATS, icon: <StatsIcon /> },
 ];
 
-export default routes;
+export { routes };

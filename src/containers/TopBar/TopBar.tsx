@@ -6,7 +6,9 @@ function TopBar() {
   return (
     <div className="flex h-16 items-center shadow">
       <div className="flex m-4 justify-between w-full">
-        <SearchInput />
+        <div className="w-1/2">
+          <SearchInput />
+        </div>
         <div className="flex gap-2 text-gray-500">
           <NotificationIcon />
         </div>
