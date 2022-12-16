@@ -25,6 +25,7 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+        "react/button-has-type": "off",
         "import/extensions": "off"
     },
     "settings": {

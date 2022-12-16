@@ -21,7 +21,7 @@ function ProfileButton({
       >
         <div className="relative w-10 h-10">
           <Image
-            className="rounded-3xl"
+            className="rounded-full"
             src={avatar}
             alt=""
             fill

@@ -21,7 +21,7 @@ function OrdersTable({
           <div>
             <div className="relative w-7 h-7">
               <Image
-                className="rounded-3xl"
+                className="inline-block rounded-full ring-2 ring-white"
                 src={icon}
                 alt={`${itemName}-icon`}
                 fill
